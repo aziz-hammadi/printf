@@ -6,13 +6,13 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:39:34 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/08 16:13:50 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/09/11 22:46:19 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_printf_hx(va_list *my_list)
+void	ft_printf_hx(va_list *my_list, t_options *op)
 {
 	unsigned int hexa;
 

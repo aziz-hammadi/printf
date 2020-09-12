@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_u.c                                      :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 21:54:08 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 15:37:50 by ahammad          ###   ########.fr       */
+/*   Created: 2019/11/25 21:15:30 by ahammad           #+#    #+#             */
+/*   Updated: 2020/09/12 00:21:03 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
-
-void	ft_putnbr_u(unsigned int n)
+int		ft_atoi(const char *str)
 {
-	if (n < 0)
+	int signe;
+	int i;
+	int nb;
+
+	signe = 1;
+	i = 0;
+	nb = 0;
+	while ((str[i] >= 7 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if (str[i] == '-')
+		signe = -1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		ft_putchar('-');
-		n = -n;
+		nb = nb * 10;
+		nb = nb + str[i] - 48;
+		i++;
 	}
-	if (n >= 10)
-	{
-		ft_putnbr_u(n / 10);
-		ft_putnbr_u(n % 10);
-	}
-	else
-		ft_putchar(n + '0');
+	return (signe * nb);
 }

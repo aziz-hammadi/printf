@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_u.c                                      :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 21:54:08 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 15:37:50 by ahammad          ###   ########.fr       */
+/*   Created: 2019/11/25 21:16:37 by ahammad           #+#    #+#             */
+/*   Updated: 2020/09/11 23:12:09 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_putnbr_u(unsigned int n)
+int		ft_isdigit(int c)
 {
-	if (n < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr_u(n / 10);
-		ft_putnbr_u(n % 10);
-	}
+	if (c >= '0' && c <= '9')
+		return (1);
 	else
-		ft_putchar(n + '0');
+		return (0);
 }
