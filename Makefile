@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = printf
+NAME = libftprintf
 
 FLAGS = -Wall -Wextra -Werror
 
