@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 21:36:31 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 17:59:39 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/09/12 22:32:53 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,12 @@ void			ft_putnbr_base(long unsigned int decimal, char *str_base);
 int				ft_isdigit(int c);
 int				ft_atoi(const char *str);
 void			ft_putnstr(char const *s, int n);
+void			ft_putstr(char const *s);
 int				ft_nbrlen(int num);
-int				ft_nbrlen_u(unsigned int nbr, int nbr);
-int				ft_nbrlen_lu(long unsigned int nbr, int nbr);
+int				ft_nbrlen_u(unsigned int nbr, int base);
+int				ft_nbrlen_lu(long unsigned int nbr, int base);
 int				ft_abs(int n);
+int				ft_printf(const char *format, ...);
+int				ft_check_op(va_list *my_list, const char *src, int i, t_options *op);
 
 #endif

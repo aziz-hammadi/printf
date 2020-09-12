@@ -69,7 +69,8 @@ int main()
 		printf("original:-010.6:\t\t|%-010.6p|\n", num);
 		//ft_printf("-010.6:\t\t|%-010.6i|\n", num);
 		printf("original|%50.9pf|\n", -34764);
-		//ft_printf("\t|%50.9if|\n", -34764);
+		ft_printf("\t|%50.9if|\n", -34764);
+    
 
         // printf("-.10:|%-.10d|\n", num);//precision sup a s longueur s sinon l'inverse
         // printf(".3:|%.3d|\n", num);//precision sup a s longueur s sinon l'inverse

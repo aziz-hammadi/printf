@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 15:38:17 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 17:55:26 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/09/12 20:00:33 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_nbrlen_u(unsigned int nbr, int base)
 {
 	int i;
 
-	i = 0;
+	i = 1;
 	while (nbr != 0)
 	{
 		nbr = nbr / base;
