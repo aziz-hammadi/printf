@@ -6,13 +6,13 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:53:54 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 21:43:04 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/09/13 03:16:17 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static void	print_num(t_options *op, int flen, int hexa, int num_len)
+static void	print_num(t_options *op, int flen, int num_len)
 {
 	int	i;
 
@@ -52,7 +52,7 @@ void		ft_printf_adress(va_list *my_list, t_options *op)
 			flen = op->precision;
 		op->zero = 0;
 	}
-	print_num(op, flen, hexa, num_len);
+	print_num(op, flen, num_len);
 	perform_print(op, hexa);
 	if ((op->width != -1) && (op->width > flen + 2 && op->less))
 		while (i++ < (op->width - flen - 2))

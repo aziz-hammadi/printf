@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:13:04 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 21:32:59 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/09/13 03:14:19 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,13 @@ static size_t g_tab_function_len = sizeof(g_tab_function) / sizeof(t_format);
 
 int			find_index(char element)
 {
-	int index;
+	size_t	index;
 
 	index = 0;
 	while (index < g_tab_function_len)
 	{
 		if (g_tab_function[index].format == element)
-			return (index);
+			return (int)(index);
 		index++;
 	}
 	return (-1);

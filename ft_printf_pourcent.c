@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/08 17:53:04 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 22:33:21 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/09/13 03:11:58 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_printf_pourcent(va_list *my_list, t_options *op)
 {
+	(void)my_list;
+	(void)op;
 	ft_putchar('%');
 }

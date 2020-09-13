@@ -6,13 +6,13 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:34:01 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 21:24:47 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/09/13 03:17:47 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-static void	print_num(t_options *op, int flen, int hexa, int num_len)
+static void	print_num(t_options *op, int flen, int num_len)
 {
 	int i;
 
@@ -50,7 +50,7 @@ void		ft_printf_hx(va_list *my_list, t_options *op)
 			flen = op->precision;
 		op->zero = 0;
 	}
-	print_num(op, flen, hexa, num_len);
+	print_num(op, flen, num_len);
 	perform_print(op, hexa);
 	i = 0;
 	if ((op->width != -1) && (op->width > flen + (hexa < 0)) && op->less)

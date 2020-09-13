@@ -18,8 +18,8 @@ int main(int argc, char const **argv)
 	// a = 48;
 	// num = &a;
 	printf("TEST\n");
-    original = printf("o:|%.0d|\n",0);
-    copie = ft_printf("m:|%.0d|\n",0);
+    original = printf("o:|%.0p|\n",0);
+    copie = ft_printf("m:|%.0p|\n",0);
     ft_printf("len_o:%.d|len_m%d\n",original, copie);
 
 

@@ -6,7 +6,7 @@
 #    By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/12 16:49:26 by ahammad           #+#    #+#              #
-#    Updated: 2020/09/12 21:37:32 by ahammad          ###   ########.fr        #
+#    Updated: 2020/09/13 04:08:15 by ahammad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,8 +36,6 @@ SRCS_PRIM =  ft_abs.c\
 		   ft_putnbr.c\
 		   ft_putnstr.c\
 		   ft_strlen.c\
-		   ft_strlcat.c\
-		   ft_strlen.c\
 		   ft_nbrlen_lu.c\
 		   ft_check_op.c\
 
@@ -60,6 +58,7 @@ fclean: clean
 
 re: fclean all
 
-norme: norminette $(SRCS_PRIM:%.c)
+norme:
+	~/.norminette/norminette.rb $(SRCS_PRIM)
 
-.PHONY : all bonus clean fclean re
+.PHONY : all bonus clean fclean norme re
