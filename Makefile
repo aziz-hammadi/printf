@@ -6,7 +6,7 @@
 #    By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/12 16:49:26 by ahammad           #+#    #+#              #
-#    Updated: 2020/09/13 04:08:15 by ahammad          ###   ########.fr        #
+#    Updated: 2020/09/13 14:30:54 by ahammad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRCS_PRIM =  ft_abs.c\
 		   ft_printf_signed.c\
 		   ft_printf_str.c\
 		   ft_printf_unsigned.c\
+		   ft_printf_nbr.c\
 		   ft_printf.c\
 		   ft_putchar.c\
 		   ft_putnbr_base.c\
