@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:56:30 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 20:54:07 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/03 17:29:15 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,27 @@
 
 static void	print_num_u(t_options *op, int flen, int num, int num_len)
 {
+	//int num inutile
 	int i;
 
 	i = 0;
 	if ((op->width != -1) && (op->width > flen && !op->less))
 		while (i++ < op->width - flen)
-			ft_putchar(op->zero ? '0' : ' ');
+			ft_putchar(op->zero ? '0' : ' ', &op->len);
 	i = 0;
 	if (flen > num_len)
 		while (i++ < op->precision - num_len)
-			ft_putchar('0');
-	if (op->precision != 0 || num != 0)
+			ft_putchar('0', &op->len);
+	/*if (op->precision != 0 || num != 0)
 		op->len += (op->width > flen ? op->width : flen);
 	else
-		op->len += (op->width > flen ? op->width : 0);
+		op->len += (op->width > flen ? op->width : 0);*/
 }
 
 static void	perform_print(t_options *op, unsigned int num)
 {
 	if (op->precision != 0 || num != 0)
-		ft_putnbr_u(num);
+		ft_putnbr_u(num, &op->len);
 }
 
 void		ft_printf_unsigned(va_list *my_list, t_options *op)
@@ -58,5 +59,5 @@ void		ft_printf_unsigned(va_list *my_list, t_options *op)
 	i = 0;
 	if ((op->width != -1) && (op->width > flen) && op->less)
 		while (i++ < (op->width - flen))
-			ft_putchar(' ');
+			ft_putchar(' ', &op->len);
 }

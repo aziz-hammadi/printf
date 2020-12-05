@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:23:42 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 11:53:27 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/10/28 00:07:34 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ void	ft_printf_char(va_list *my_list, t_options *op)
 
 	c = va_arg(*my_list, int);
 	if (op->less == 1)
-		write(1, &c, 1);
+		ft_putchar(c, &op->len);
 	while (op->width > 1)
 	{
-		ft_putchar(' ');
+		ft_putchar(' ', &op->len);
 		op->width--;
 	}
 	if (op->less == 0)
-		write(1, &c, 1);
-	op->len += (op->width > 0 ? op->width : 1);
+		ft_putchar(c, &op->len);
+	//op->len += (op->width > 0 ? op->width : 1);
 }

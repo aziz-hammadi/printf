@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:13:04 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/13 03:14:19 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/01 16:04:58 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,10 @@ int			ft_printf(const char *src, ...)
 			if (tmp_index != -1)
 				g_tab_function[tmp_index].format_func(&my_list, &op);
 			else
-				write(1, &src[i], 1);
+				ft_putchar(src[i], &op.len);
 		}
-		else if (src[i] != '%' && (++op.len))
-			write(1, &src[i], 1);
+		else if (src[i] != '%')
+				ft_putchar(src[i], &op.len);
 	}
 	return (op.len);
 }

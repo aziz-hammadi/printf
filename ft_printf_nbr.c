@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:26:47 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 20:23:13 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/03 03:12:04 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ static void	print_num(t_options *op, int flen, int num, int num_len)
 	i = 0;
 	if ((op->width != -1) && (op->width > flen + (num < 0)) && !op->less)
 		while (i++ < (op->width - flen - (num < 0)))
-			ft_putchar(op->zero ? '0' : ' ');
+			ft_putchar(op->zero ? '0' : ' ', &op->len);
 	if (num < 0 && op->width != -1 && !op->less && !op->zero)
-		ft_putchar('-');
+		ft_putchar('-', &op->len);
 	i = 0;
 	if (flen > num_len)
 		while (i++ < op->precision - num_len)
-			ft_putchar('0');
-	op->len += (op->width > flen + (num < 0) ? op->width : flen + (num < 0));
+			ft_putchar('0', &op->len);
+	//op->len += (op->width > flen + (num < 0) ? op->width : flen + (num < 0));
 }
 
 static void	perform_print(t_options *op, int num)
 {
 	if (op->precision != 0 || num != 0)
-		ft_putnbr(ft_abs(num));
+		ft_putnbr(ft_abs(num), &op->len);
 }
 
 void		ft_printf_nbr(va_list *my_list, t_options *op)
@@ -48,16 +48,16 @@ void		ft_printf_nbr(va_list *my_list, t_options *op)
 	flen = num_len;
 	if (op->precision != -1)
 	{
-		if (op->precision > num_len)
+		if (op->precision > num_len || (op->precision == 0 && num == 0))
 			flen = op->precision;
 		op->zero = 0;
 	}
 	if (num < 0 && (op->width == -1 || op->less || op->zero))
-		ft_putchar('-');
+		ft_putchar('-', &op->len);
 	print_num(op, flen, num, num_len);
 	perform_print(op, num);
 	i = 0;
 	if ((op->width != -1) && (op->width > flen + (num < 0)) && op->less)
 		while (i++ < (op->width - flen - (num < 0)))
-			ft_putchar(' ');
+			ft_putchar(' ', &op->len);
 }

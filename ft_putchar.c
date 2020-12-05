@@ -6,13 +6,14 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:29:38 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/10 15:53:27 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/10/27 23:40:13 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_putchar(char c)
+void	ft_putchar(char c, int *len)
 {
 	write(1, &c, 1);
+	*len = (*len) + 1;
 }

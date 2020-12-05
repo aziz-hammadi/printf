@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 21:36:31 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 22:32:53 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/10/28 00:00:10 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,15 @@ void			ft_printf_signed(va_list *my_list, t_options *op);
 void			ft_printf_pourcent(va_list *my_list, t_options *op);
 void			ft_printf_hexa(va_list *my_list, t_options *op);
 void			ft_printf_hx(va_list *my_list, t_options *op);
-void			ft_putnbr_u(unsigned int n);
-void			ft_putchar(char c);
-void			ft_putnbr(int n);
+void			ft_putnbr_u(unsigned int n, int *len);
+void			ft_putchar(char c, int *len);
+void			ft_putnbr(int n, int *len);
 size_t			ft_strlen(const char *s);
-void			ft_putnbr_base(long unsigned int decimal, char *str_base);
+void			ft_putnbr_base(long unsigned int decimal, char *str_base, int *len);
 int				ft_isdigit(int c);
 int				ft_atoi(const char *str);
-void			ft_putnstr(char const *s, int n);
-void			ft_putstr(char const *s);
+void			ft_putnstr(char const *s, int n, int *len);
+//void			ft_putstr(char const *s);
 int				ft_nbrlen(int num);
 int				ft_nbrlen_u(unsigned int nbr, int base);
 int				ft_nbrlen_lu(long unsigned int nbr, int base);
