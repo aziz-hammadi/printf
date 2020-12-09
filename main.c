@@ -30,9 +30,9 @@ int main()
 	//printf("\nsuviant\n");
 	//ft_printf("%.*i, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d, %.*d", -10, 1, a, j, a, k, a, l, a, m, a, c, a, e, a, d);
 
-	z = printf("|%.*i|\n", 22, i);
+	z = printf("|%.*i|\n", 11, i);
 	fflush(stdout);
-	zz = ft_printf("|%.*i|\n", 22, i);
+	zz = ft_printf("|%.*i|\n", 11, i);
 	//printf("\nlen:\n%d\n%d\n", z , zz);
 
 	//z = printf("original:\n |%i|\n |%d|\n |%d|\n |%d|\n |%d|\n |%s|\n |%c|\n |%d|\n |%u|\n |%x|\n |%X|\n", i, j, k, l, m, n, c, c, j, j, j);
