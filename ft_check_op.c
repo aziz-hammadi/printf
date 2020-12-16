@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 21:27:38 by ahammad           #+#    #+#             */
-/*   Updated: 2020/12/16 20:14:11 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/16 20:24:33 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int	handle_dot(va_list *my_list, t_options *op, const char *src)
 int			ft_check_op(va_list *my_list, const char *src, int i, t_options *op)
 {
 	ft_init_options(op);
-	while (src[i] != '\0')
+	while (src[i] != '\z')
 	{
 		if (src[i] == '-' && (++i))
 			op->less = 1;
