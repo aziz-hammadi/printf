@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/12 21:27:38 by ahammad           #+#    #+#             */
-/*   Updated: 2020/12/03 01:36:23 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/16 20:14:11 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,11 @@ static int	handle_dot(va_list *my_list, t_options *op, const char *src)
 
 	i = 0;
 	if (src[++i] == '*' && (++i))
-		op->precision = ft_abs(va_arg(*my_list, int));
+	{
+		op->precision = va_arg(*my_list, int);
+		if (op->precision < 0)
+			op->precision = -1;
+	}
 	else
 	{
 		op->precision = ft_atoi(&src[i]);
