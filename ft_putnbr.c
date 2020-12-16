@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 21:54:08 by ahammad           #+#    #+#             */
-/*   Updated: 2020/10/28 00:11:12 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/13 18:02:26 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_putnbr(int n, int *len)
 {
 	if (n == -2147483648)
 	{
-		//ft_putchar('-');
 		ft_putchar('2', len);
 		ft_putnbr(147483648, len);
 		return ;

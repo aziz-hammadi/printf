@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:23:42 by ahammad           #+#    #+#             */
-/*   Updated: 2020/10/28 00:07:34 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/16 14:06:20 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ void	ft_printf_char(va_list *my_list, t_options *op)
 	}
 	if (op->less == 0)
 		ft_putchar(c, &op->len);
-	//op->len += (op->width > 0 ? op->width : 1);
 }

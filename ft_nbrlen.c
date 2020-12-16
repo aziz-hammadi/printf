@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/11 17:23:11 by ahammad           #+#    #+#             */
-/*   Updated: 2020/10/28 00:39:38 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/16 20:09:56 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ int	ft_nbrlen(int nbr)
 		i = 1;
 		nbr = -nbr;
 	}
-
-	/*if (nbr == 0)
-		return (1);*/
 	while (nbr > 9)
 	{
 		nbr = nbr / 10;

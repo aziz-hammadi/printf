@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:13:04 by ahammad           #+#    #+#             */
-/*   Updated: 2020/12/01 16:04:58 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/16 20:12:54 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int			ft_printf(const char *src, ...)
 				ft_putchar(src[i], &op.len);
 		}
 		else if (src[i] != '%')
-				ft_putchar(src[i], &op.len);
+			ft_putchar(src[i], &op.len);
 	}
 	return (op.len);
 }

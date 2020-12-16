@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:53:54 by ahammad           #+#    #+#             */
-/*   Updated: 2020/10/29 12:13:26 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/16 13:07:14 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ static void	print_num(t_options *op, int flen, int num_len)
 	if (flen > num_len)
 		while (i++ < op->precision - num_len)
 			ft_putchar('0', &op->len);
-	//op->len += (op->width > flen + 2 ? op->width : flen) + 2;
 }
 
 static void	perform_print(t_options *op, unsigned long hexa)

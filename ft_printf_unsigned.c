@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:56:30 by ahammad           #+#    #+#             */
-/*   Updated: 2020/12/03 17:29:15 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/16 20:07:41 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 static void	print_num_u(t_options *op, int flen, int num, int num_len)
 {
-	//int num inutile
 	int i;
 
 	i = 0;
@@ -25,10 +24,6 @@ static void	print_num_u(t_options *op, int flen, int num, int num_len)
 	if (flen > num_len)
 		while (i++ < op->precision - num_len)
 			ft_putchar('0', &op->len);
-	/*if (op->precision != 0 || num != 0)
-		op->len += (op->width > flen ? op->width : flen);
-	else
-		op->len += (op->width > flen ? op->width : 0);*/
 }
 
 static void	perform_print(t_options *op, unsigned int num)
@@ -52,6 +47,8 @@ void		ft_printf_unsigned(va_list *my_list, t_options *op)
 	{
 		if (op->precision > nbr_len)
 			flen = op->precision;
+		else if (op->precision == 0 && nbr == 0)
+			flen = 0;
 		op->zero = 0;
 	}
 	print_num_u(op, flen, nbr, nbr_len);
