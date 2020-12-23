@@ -6,7 +6,7 @@
 #    By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/12 16:49:26 by ahammad           #+#    #+#              #
-#    Updated: 2020/10/23 18:06:21 by ahammad          ###   ########.fr        #
+#    Updated: 2020/12/23 20:05:07 by ahammad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,6 @@ SRCS_PRIM =  ft_abs.c\
 		   ft_strlen.c\
 		   ft_nbrlen_lu.c\
 		   ft_check_op.c\
-		   main.c\
 
 OBJS_PRIM = $(SRCS_PRIM:%.c=%.o)
 
@@ -61,6 +60,6 @@ fclean: clean
 re: fclean all
 
 norme:
-	~/.norminette/norminette.rb $(SRCS_PRIM)
+	~/.norminette/norminette.rb $(SRCS_PRIM) ft_printf.h
 
 .PHONY : all bonus clean fclean norme re
