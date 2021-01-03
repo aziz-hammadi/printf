@@ -6,11 +6,11 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/16 17:13:04 by ahammad           #+#    #+#             */
-/*   Updated: 2020/12/16 20:12:54 by ahammad          ###   ########.fr       */
+/*   Updated: 2021/01/03 21:59:08 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static t_format g_tab_function[] = {
 	{'s', ft_printf_str},

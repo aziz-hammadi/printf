@@ -6,11 +6,11 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/19 11:22:47 by nlafarge          #+#    #+#             */
-/*   Updated: 2020/12/16 20:13:28 by ahammad          ###   ########.fr       */
+/*   Updated: 2021/01/03 21:59:08 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 void	ft_putnstr(char const *s, int n, int *len)
 {

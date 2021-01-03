@@ -6,11 +6,11 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:26:47 by ahammad           #+#    #+#             */
-/*   Updated: 2020/12/16 20:06:06 by ahammad          ###   ########.fr       */
+/*   Updated: 2021/01/03 21:59:08 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static void	print_num(t_options *op, int flen, int num, int num_len)
 {

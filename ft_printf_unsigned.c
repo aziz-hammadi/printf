@@ -6,13 +6,13 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:56:30 by ahammad           #+#    #+#             */
-/*   Updated: 2020/12/16 20:07:41 by ahammad          ###   ########.fr       */
+/*   Updated: 2021/01/03 21:59:08 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-static void	print_num_u(t_options *op, int flen, int num, int num_len)
+static void	print_num_u(t_options *op, int flen, int num_len)
 {
 	int i;
 
@@ -51,7 +51,7 @@ void		ft_printf_unsigned(va_list *my_list, t_options *op)
 			flen = 0;
 		op->zero = 0;
 	}
-	print_num_u(op, flen, nbr, nbr_len);
+	print_num_u(op, flen, nbr);
 	perform_print(op, nbr);
 	i = 0;
 	if ((op->width != -1) && (op->width > flen) && op->less)
