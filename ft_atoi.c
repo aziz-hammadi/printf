@@ -6,15 +6,15 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/25 21:15:30 by ahammad           #+#    #+#             */
-/*   Updated: 2020/09/12 00:21:03 by ahammad          ###   ########.fr       */
+/*   Updated: 2020/12/27 16:20:47 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(const char *str)
 {
-	int signe;
-	int i;
-	int nb;
+	int	signe;
+	int	i;
+	int	nb;
 
 	signe = 1;
 	i = 0;

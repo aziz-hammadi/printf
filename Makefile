@@ -6,7 +6,7 @@
 #    By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/12 16:49:26 by ahammad           #+#    #+#              #
-#    Updated: 2020/12/23 20:05:07 by ahammad          ###   ########.fr        #
+#    Updated: 2021/01/03 18:18:21 by ahammad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,6 @@ fclean: clean
 re: fclean all
 
 norme:
-	~/.norminette/norminette.rb $(SRCS_PRIM) ft_printf.h
+	~/.norminette/norminette.rb $(SRCS_PRIM) printf.h
 
 .PHONY : all bonus clean fclean norme re
