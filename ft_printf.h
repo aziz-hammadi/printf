@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 21:36:31 by ahammad           #+#    #+#             */
-/*   Updated: 2021/01/09 11:13:57 by ahammad          ###   ########.fr       */
+/*   Updated: 2021/01/09 11:16:23 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ typedef struct	s_format
 	void	(*format_func)(va_list *, t_options *);
 }				t_format;
 
-void			ft_printf_str(va_list *my_list, t_options *op);
+voidft_printf_str(va_list *my_list, t_options *op);
 void			ft_printf_char(va_list *my_list, t_options *op);
 void			ft_printf_nbr(va_list *my_list, t_options *op);
 void			ft_printf_adress(va_list *my_list, t_options *op);
