@@ -6,7 +6,7 @@
 #    By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/12 16:49:26 by ahammad           #+#    #+#              #
-#    Updated: 2021/01/04 01:19:51 by ahammad          ###   ########.fr        #
+#    Updated: 2021/01/09 11:32:10 by ahammad          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,12 +46,12 @@ OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
+%.o: %.c
+	$(CC) -c $< $(FLAGS)
+
 $(NAME): $(OBJS)
 	ar rc $(NAME).a $(OBJS)
 	ranlib $(NAME).a
-
-%.o: %.c
-	$(CC) -c $< $(FLAGS)
 
 clean:
 	rm -f $(OBJS) 
