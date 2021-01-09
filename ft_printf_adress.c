@@ -6,19 +6,24 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:53:54 by ahammad           #+#    #+#             */
-/*   Updated: 2021/01/03 21:59:08 by ahammad          ###   ########.fr       */
+/*   Updated: 2021/01/09 17:44:43 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	print_num(t_options *op, int flen, int num_len)
+static void	print_num(t_options *op, int flen, int num_len, unsigned long hexa)
 {
 	int	i;
+	int plus;
 
 	i = 0;
-	if ((op->width != -1) && (op->width > flen + 2 && !op->less))
-		while (i++ < (op->width - flen - 2))
+	if (op->precision == 0 && hexa == 0)
+		plus = 1;
+	else
+		plus = 2;
+	if ((op->width != -1) && (op->width > flen + plus && !op->less))
+		while (i++ < (op->width - flen - plus))
 			ft_putchar(op->zero ? '0' : ' ', &op->len);
 	i = 0;
 	ft_putchar('0', &op->len);
@@ -51,7 +56,7 @@ void		ft_printf_adress(va_list *my_list, t_options *op)
 			flen = op->precision;
 		op->zero = 0;
 	}
-	print_num(op, flen, num_len);
+	print_num(op, flen, num_len, hexa);
 	perform_print(op, hexa);
 	if ((op->width != -1) && (op->width > flen + 2 && op->less))
 		while (i++ < (op->width - flen - 2))
