@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/06 21:36:31 by ahammad           #+#    #+#             */
-/*   Updated: 2021/01/09 11:20:25 by ahammad          ###   ########.fr       */
+/*   Updated: 2021/01/09 11:21:21 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,14 @@ void			ft_putchar(char c, int *len);
 void			ft_putnbr(int n, int *len);
 size_t			ft_strlen(const char *s);
 void			ft_putnbr_base(long unsigned int deci, char *str_base, int *l);
-intft_isdigit(int c);
-intft_atoi(const char *str);
+int				ft_isdigit(int c);
+int				ft_atoi(const char *str);
 void			ft_putnstr(char const *s, int n, int *len);
-intft_nbrlen(int num);
-intft_nbrlen_u(unsigned int nbr, int base);
-intft_nbrlen_lu(long unsigned int nbr, int base);
-intft_abs(int n);
-intft_printf(const char *format, ...);
-intft_check_op(va_list *ml, const char *src, int i, t_options *o);
+int				ft_nbrlen(int num);
+int				ft_nbrlen_u(unsigned int nbr, int base);
+int				ft_nbrlen_lu(long unsigned int nbr, int base);
+int				ft_abs(int n);
+int				ft_printf(const char *format, ...);
+int				ft_check_op(va_list *ml, const char *src, int i, t_options *o);
 
 #endif
