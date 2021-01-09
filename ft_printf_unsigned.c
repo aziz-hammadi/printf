@@ -6,7 +6,7 @@
 /*   By: ahammad <ahammad@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/07 00:56:30 by ahammad           #+#    #+#             */
-/*   Updated: 2021/01/03 21:59:08 by ahammad          ###   ########.fr       */
+/*   Updated: 2021/01/09 11:38:33 by ahammad          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void		ft_printf_unsigned(va_list *my_list, t_options *op)
 			flen = 0;
 		op->zero = 0;
 	}
-	print_num_u(op, flen, nbr);
+	print_num_u(op, flen, nbr_len);
 	perform_print(op, nbr);
 	i = 0;
 	if ((op->width != -1) && (op->width > flen) && op->less)
